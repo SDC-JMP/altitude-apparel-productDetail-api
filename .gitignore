@@ -1,0 +1,8 @@
+./database/config.js
+config.js
+node_modules
+public/bundle.js
+package-lock.json
+/coverage/lcov-report/*
+coverage/lcov-report/index.html
+.vscode/*
