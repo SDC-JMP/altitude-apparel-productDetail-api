@@ -30,7 +30,7 @@ const getProductInfo = (product_id, callback) => {
       callback(err, null);
       console.log(err);
     } else {
-      callback(null, results.rows);
+      callback(null, results.rows[0]);
     }
   });
 };
