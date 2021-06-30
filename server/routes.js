@@ -2,6 +2,10 @@ const express = require('express');
 const router = express.Router();
 const db = require('../database/queries.js');
 
+router.get('/', (req, res) => {
+  res.status(200).send('hello Phong');
+});
+
 router.get('/products', (req, res) => {
   db.getAllProducts((err, data) => {
     if (err) {
