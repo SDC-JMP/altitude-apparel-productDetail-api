@@ -9,7 +9,18 @@ services:
       POSTGRES_PASSWORD: '@Sql5432'
     ports:
       - '5436:5432'
-  server:
+  nginx:
+    depends_on:
+      - api
+    restart: always
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./nginx
+    ports:
+      - '3050:80'
+  api:
+    depends_on:
+      - postgres
     build:
       dockerfile: Dockerfile.dev
       context: .
