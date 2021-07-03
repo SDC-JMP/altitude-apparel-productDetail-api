@@ -32,7 +32,10 @@ router.get('/products/:product_id/styles', (req, res) => {
     if (err) {
       res.status(404).send(err);
     } else {
-      res.status(200).send(data);
+      res.status(200).json({
+        product_id: req.params.product_id,
+        results: data,
+      });
     }
   });
 });

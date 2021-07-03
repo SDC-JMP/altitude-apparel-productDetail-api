@@ -36,7 +36,7 @@ const getProductInfo = (product_id, callback) => {
 };
 
 const getProductStyle = (product_id, callback) => {
-  const queryString = `select styles.style_id, style_name as name, sale_price, original_price, default_style as default?, jsonb_agg(json_build_object('thumbnail_url', photos.thumbnail_url, 'url', photos.url)) as photos, jsonb_object_agg('sku_id', json_build_object('quantity', skus.quantity, 'size', skus.size)) as skus from styles join photos on photos.style_id = styles.style_id join skus on skus.style_id = styles.style_id where styles.product_id = $1 group by styles.style_id`;
+  const queryString = `select styles.style_id, style_name as name, sale_price, original_price, default_style as default, jsonb_agg(json_build_object('thumbnail_url', photos.thumbnail_url, 'url', photos.url)) as photos, jsonb_object_agg('sku_id', json_build_object('quantity', skus.quantity, 'size', skus.size)) as skus from styles join photos on photos.style_id = styles.style_id join skus on skus.style_id = styles.style_id where styles.product_id = $1 group by styles.style_id`;
 
   pool.query(queryString, [product_id], (err, results) => {
     if (err) {
