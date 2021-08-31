@@ -2,8 +2,6 @@
 
 Welcome to Altitude Apparel’s retail portal! Thank you for taking an interest in our code. This repository contains code for building the back-end services required for Product Details data for Altitude Apparel. Specifically, this repository will running Express servers as well as a PostgreSQL database containing the Product Details data.
 
----
-
 ## Motivation
 
 This project was implemented to allow for scaling on AWS as web traffic to the Threads site increases.
