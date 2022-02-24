@@ -4,7 +4,7 @@ Welcome to Altitude Apparel’s retail portal! Thank you for taking an interest 
 
 ## Motivation
 
-This project was implemented to allow for scaling on AWS as web traffic to the Threads site increases.
+This project was implemented to allow for scaling on AWS as web traffic to the altitude-apparel site increases.
 
 ## Installation
 
